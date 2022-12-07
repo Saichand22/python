@@ -1,0 +1,24 @@
+import random
+i=1
+e=0
+a=int(input("enter your starting number"))
+b=int(input("enter your ending number"))
+l=[]
+for i in range(a,b):
+    l.append(i)
+c=random.choice(l)
+while True:
+    d=int(input("enter a number"))
+    if d==c:
+        print("congrats")
+        break
+    elif d>c:
+        print("have one more try your guess was too high")
+        e=e+1
+    elif d<c:
+        print("have one more try your guess was too small")
+        e=e+1
+    if e==3:
+        print("Better luck next time!")
+        break
+print("the number is",c)
